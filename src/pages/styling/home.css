@@ -1,0 +1,29 @@
+/* src/animations.css */
+
+@keyframes slideMove {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+/* Shared animation */
+.image-slide {
+  animation: slideMove 4s ease-in-out infinite;
+}
+
+/* Individual delays */
+.image-delay-0 {
+  animation-delay: 0s;
+}
+.image-delay-1 {
+  animation-delay: 0.5s;
+}
+.image-delay-2 {
+  animation-delay: 1s;
+}
+.image-delay-3 {
+  animation-delay: 1.5s;
+}
