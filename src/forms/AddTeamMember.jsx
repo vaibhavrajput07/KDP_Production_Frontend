@@ -1,4 +1,3 @@
-// ✅ Updated AddTeamMember.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -7,7 +6,6 @@ import Spinner from '../components/Spinner';
 function AddTeamMember() {
     const location = useLocation();
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(false);
     const memberToEdit = location.state?.member;
 
     const [form, setForm] = useState({ name: '', title: '' });
@@ -83,15 +81,28 @@ function AddTeamMember() {
             setImage(null);
             setEditId(null);
             setFormErrors({});
-            navigate('/about');
+            setTimeout(() => navigate('/about'), 1000); // 1-second delay
         } catch (error) {
-            const msg = error.response?.data?.message || 'Something went wrong!';
-            setErrorMessage(msg);
+            const status = error.response?.status;
+            if (status === 403 || status === 401) {
+                setErrorMessage('Unauthorized. Please login again.');
+                setTimeout(() => navigate('/login'), 1500);
+            } else {
+                const msg = error.response?.data?.message || 'Something went wrong!';
+                setErrorMessage(msg);
+            }
         } finally {
             setIsLoading(false);
         }
     };
-    if (loading) return <Spinner />;
+
+    const handleReset = () => {
+        setForm({ name: '', title: '' });
+        setImage(null);
+        setPreviewImage('');
+        setEditId(null);
+        setFormErrors({});
+    };
 
     return (
         <div className="min-h-screen flex mt-18 justify-center">
@@ -152,15 +163,24 @@ function AddTeamMember() {
                             className="w-24 h-24 mt-4 rounded-full object-cover border"
                         />
                     )}
-                    
                 </div>
 
+                {/* Submit */}
                 <button
                     type="submit"
                     disabled={isLoading}
                     className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
                 >
                     {isLoading ? 'Processing...' : editId ? 'Update Member' : 'Add Member'}
+                </button>
+
+                {/* Optional Reset */}
+                <button
+                    type="button"
+                    onClick={handleReset}
+                    className="w-full mt-4 py-3 bg-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-400 transition"
+                >
+                    Reset
                 </button>
             </form>
         </div>
