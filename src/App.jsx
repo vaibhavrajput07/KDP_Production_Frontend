@@ -29,14 +29,14 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/auth/me', { withCredentials: true })
+    axios.get(`${import.meta.env.VITE_API_URL}/api/auth/me`, { withCredentials: true })
       .then(() => setIsLoggedIn(true))
       .catch(() => setIsLoggedIn(false))
       .finally(() => setLoading(false)); // Done checking login
   }, []);
 
   const handleLogout = () => {
-    axios.post('http://localhost:5000/api/auth/logout', {}, { withCredentials: true })
+    axios.post(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {}, { withCredentials: true })
       .then(() => setIsLoggedIn(false));
   };
 

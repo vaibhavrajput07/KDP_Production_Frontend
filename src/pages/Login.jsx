@@ -16,6 +16,11 @@ export default function Login({ onLogin }) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const location = useLocation();
+const from = location.state?.from?.pathname || '/admin/products';
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
@@ -28,7 +33,7 @@ export default function Login({ onLogin }) {
         { withCredentials: true }
       );
       onLogin();
-      navigate('/admin/products');
+      navigate(from, { replace: true }); // ✅ Redirect to original location
     } catch (err) {
       setError(err.response?.data?.msg || 'Login failed');
     }
