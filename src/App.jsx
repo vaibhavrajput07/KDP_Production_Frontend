@@ -19,7 +19,7 @@ import AdminDashboard from './pages/AdminDashboard'
 
 //Forms
 
-import AddTeamMember from './forms/addTeamMember';
+import AddTeamMember from './forms/AddTeamMember';
 
 import ScrollToTop from './components/ScrollToTop';
 import Spinner from './components/Spinner';
