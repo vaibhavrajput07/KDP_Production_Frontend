@@ -77,7 +77,7 @@ export default function Navbar({ isLoggedIn, onLogout }) {
                     <span className="sr-only">Open user menu</span>
                     <img
                       className="h-12 w-12 rounded-full"
-                      src="https://res.cloudinary.com/dogbphnnx/image/upload/v1751979691/karan2_whvjj6.jpg.jpg"
+                      src="https://res.cloudinary.com/dogbphnnx/image/upload/v1751979691/karan2_whvjj6.jpg"
                       alt="User"
                     />
                   </MenuButton>

@@ -6,7 +6,7 @@ import Spinner from '../components/Spinner';
 const owner = {
     name: 'Karansing Rajput',
     title: 'Brands Promoter',
-    image: '/karan2.jpg',
+    image: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979691/karan2_whvjj6.jpg',
     bio: `I’m a passionate Social Media Influencer, skilled Choreographer, and trusted Brand Promoter.`,
     extra: `I help brands grow through engaging content, dance promotions, and viral campaigns.`,
     hobbies: `👉 Let’s connect and take your brand to the next level — promote with us today!`,
