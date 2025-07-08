@@ -12,8 +12,8 @@ const owner = {
     hobbies: `👉 Let’s connect and take your brand to the next level — promote with us today!`,
     links: [
         { label: 'Instagram', url: 'https://www.instagram.com/karuu07' },
-        { label: 'Facebook', url: '#' },
-        { label: 'Mail', url: 'mailto:vaibhavrajput411@gmail.com?subject=Help%20Request' },
+        { label: 'Facebook', url: 'https://www.facebook.com/share/16cgUkppAi/' },
+        { label: 'Mail', url: 'mailto:Karansingpardeshi68@gmail.com?subject=Help%20Request' },
     ],
 };
 
@@ -101,7 +101,7 @@ export default function About({isLoggedIn}) {
                             event promotions and influencer marketing.
                         </p>
                         <p className="mt-8">
-                            Want to partner with us? Connect via our <a href="#" className="text-blue-600 hover:underline">Instagram</a>, check out our recent <a href="#" className="text-blue-600 hover:underline">promotions</a>, or read more about our <a href="#" className="text-blue-600 hover:underline">team story</a>.
+                            Want to partner with us? Connect via our <a href="https://www.instagram.com/karuu07?igsh=MWUwc2FpbHBlNDkwbg==" className="text-blue-600 hover:underline">Instagram</a>, check out our recent <a href="https://www.instagram.com/karuu07?igsh=MWUwc2FpbHBlNDkwbg==" className="text-blue-600 hover:underline">promotions</a>, or read more about our <a href="#" className="text-blue-600 hover:underline">team story</a>.
                         </p>
                     </div>
                 </div>

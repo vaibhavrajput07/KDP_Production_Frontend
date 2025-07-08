@@ -32,23 +32,59 @@ function AddTeamMember() {
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
-        setImage(file);
-        if (file) setPreviewImage(URL.createObjectURL(file));
+        setFormErrors({ ...formErrors, image: '' }); // Clear any previous error
+
+        if (file) {
+            const maxSize = 5 * 1024 * 1024; // 5MB
+            const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+
+            if (!allowedTypes.includes(file.type)) {
+                setFormErrors(prev => ({
+                    ...prev,
+                    image: 'Only JPG, JPEG, or PNG files are allowed.'
+                }));
+                setImage(null);
+                setPreviewImage('');
+                return;
+            }
+
+            if (file.size > maxSize) {
+                setFormErrors(prev => ({
+                    ...prev,
+                    image: 'Image size must be less than 5MB.'
+                }));
+                setImage(null);
+                setPreviewImage('');
+                return;
+            }
+
+            setImage(file);
+            setPreviewImage(URL.createObjectURL(file));
+        }
     };
+
 
     const validateForm = () => {
         const errors = {};
+
         if (!form.name.trim()) {
             errors.name = 'Name is required.';
         } else if (form.name.trim().length < 3) {
             errors.name = 'Name must be at least 3 characters.';
         }
+
         if (!form.title.trim()) {
             errors.title = 'Role is required.';
         }
+
+        if (!editId && !image) {
+            errors.image = 'Profile image is required.';
+        }
+
         setFormErrors(errors);
         return Object.keys(errors).length === 0;
     };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -152,7 +188,7 @@ function AddTeamMember() {
                     <input
                         type="file"
                         name="image"
-                        accept="image/*"
+                        accept="image/jpeg, image/jpg, image/png"
                         onChange={handleImageChange}
                         className="w-full p-2.5 border border-gray-300 rounded-lg cursor-pointer bg-gray-50"
                     />
@@ -163,6 +199,10 @@ function AddTeamMember() {
                             className="w-24 h-24 mt-4 rounded-full object-cover border"
                         />
                     )}
+                    {formErrors.image && (
+                        <p className="text-sm text-red-500 mt-1">{formErrors.image}</p>
+                    )}
+
                 </div>
 
                 {/* Submit */}

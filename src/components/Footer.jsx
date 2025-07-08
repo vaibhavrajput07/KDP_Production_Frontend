@@ -52,7 +52,7 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold mb-4">Follow Us</h2>
           <div className="flex space-x-4 text-2xl">
-            <a href="#" className="hover:text-blue-400"><FaFacebook /></a>
+            <a href="https://www.facebook.com/share/16cgUkppAi/" className="hover:text-blue-400"><FaFacebook /></a>
             <a href="https://www.instagram.com/karuu07?igsh=MWUwc2FpbHBlNDkwbg==" className="hover:text-pink-400"><FaInstagram /></a>
             <a href="https://m.youtube.com/@Karuu07VOLG?fbclid=PAQ0xDSwLV0mRleHRuA2FlbQIxMAABp9EmYg0_2QUdD4rai01ev5tIuVOpnrlv69p2Z4Tc4eRab0rkjd_xbOT194kY_aem_Pv9Rxb9Xh3AVKHop2RM46Q" className="hover:text-red-500"><FaYoutube /></a>
             <a href="" className="hover:text-sky-400 cursor-not-allowed" onClick={(e) => e.preventDefault()}><FaTwitter /></a>
