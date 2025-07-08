@@ -5,7 +5,7 @@ import { FaUsers, FaUserFriends, FaTools, FaBriefcase } from 'react-icons/fa';
 function AdminProducts() {
   const user = {
     name: 'Karansing Rajput',
-    profilePic: '/karan2.jpg', // or local image
+    profilePic: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979691/karan2_whvjj6.jpg', // or local image
   };
 
   return (

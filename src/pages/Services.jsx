@@ -4,24 +4,24 @@ function Services() {
         {
             title: 'Choreography',
             description: 'Unique and high-energy dance choreography for events, reels, weddings, and stage shows.',
-            image: '/images/choreography.webp',
+            image: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979168/choreography_vf4ifh.webp',
             price: 'Starting from ₹ 5,000 per session',
         },
         {
             title: 'Brand Promotions',
             description: 'Promote your business or product through creative videos, reels, and social media strategies.',
-            image: '/images/brand-promotions.jpeg',
+            image: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979167/brand-promotions_hutesj.jpg',
             price: 'Custom pricing based on campaign – Contact for quote',
         },
         {
             title: 'Dance Content',
             description: 'Engaging dance videos for YouTube, Instagram, and short-form platforms with viral appeal.',
-            image: '/images/instagram.jpg',
+            image: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979262/instagram_hla5ab.jpg',
             price: 'Starting from ₹ 3,000 per video',
         },
         {
             title: 'YouTube Content Creation',
-            description: 'Professional YouTube video content – from scripting to editing and engaging audience delivery.',
+            description: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979294/youtube_v37ayh.jpg',
             image: '/images/youtube.jpg',
             price: '₹ 4,000 – ₹ 10,000 depending on video length & type',
         },

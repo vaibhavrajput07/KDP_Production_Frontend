@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   const images = [
-    { src: '/images/Hero.jpg', position: 'object-center' },
-    { src: '/images/Hero2.jpg', position: 'object-top' },
-    { src: '/images/Hero3.jpg', position: 'object-bottom' },
-    { src: '/images/Hero4.jpg', position: 'object-center' },
+    { src: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979192/Hero_lujygs.jpg', position: 'object-center' },
+    { src: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979204/Hero2_nvfiyl.jpg', position: 'object-top' },
+    { src: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979222/Hero3_n8ybxq.jpg', position: 'object-bottom' },
+    { src: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979247/Hero4_japchr.jpg', position: 'object-center' },
   ];
 
   const videos = [

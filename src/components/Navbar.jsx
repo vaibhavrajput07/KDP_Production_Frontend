@@ -42,7 +42,7 @@ export default function Navbar({ isLoggedIn, onLogout }) {
 
             {/* Logo and Nav */}
             <div className="flex flex-1 items-center justify-center sm:justify-start">
-              <img src="/images/RBKDP.png" alt="KDP Logo" className="h-20 w-auto" />
+              <img src="https://res.cloudinary.com/dogbphnnx/image/upload/v1751979936/RBKDP_gchrvw.png" alt="KDP Logo" className="h-20 w-auto" />
               <div className="hidden sm:ml-8 sm:block">
                 <div className="flex items-center space-x-6">
                   {navigation.map((item) => (
@@ -77,7 +77,7 @@ export default function Navbar({ isLoggedIn, onLogout }) {
                     <span className="sr-only">Open user menu</span>
                     <img
                       className="h-12 w-12 rounded-full"
-                      src="/karan2.jpg"
+                      src="https://res.cloudinary.com/dogbphnnx/image/upload/v1751979691/karan2_whvjj6.jpg.jpg"
                       alt="User"
                     />
                   </MenuButton>
