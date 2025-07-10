@@ -135,7 +135,7 @@ export default function Home() {
           {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
-              src="/images/JustAmalner.jpg"
+              src="https://res.cloudinary.com/dogbphnnx/image/upload/v1751979269/JustAmalner_etfqy2.jpg"
               alt="Aamhi Amarlnerkar"
               className="w-60 h-60 lg:w-72 lg:h-72  rounded-full object-cover shadow-xl transition-transform duration-500 hover:scale-105 border-4 border-pink-500"
             />
