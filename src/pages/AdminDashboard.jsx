@@ -1,6 +1,9 @@
 
 import DashboardCard from '../components/Dashboardcard';
 import { FaUsers, FaUserFriends, FaTools, FaBriefcase } from 'react-icons/fa';
+import react, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Spinner from '../components/Spinner';
 
 function AdminProducts() {
   const user = {
@@ -8,6 +11,27 @@ function AdminProducts() {
     profilePic: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979691/karan2_whvjj6.jpg', // or local image
   };
 
+  const [userCount, setUserCount] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCount = async () => {
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/contacts`, {
+          withCredentials: true,
+        });
+        setUserCount(res.data.total);
+      } catch (err) {
+        console.error("Failed to fetch user count", err);
+      }
+      finally {
+        setLoading(false)
+      }
+    };
+    fetchCount();
+  }, []);
+
+  if (loading) return <Spinner />;
   return (
     <div className="min-h-screen to-indigo-100 px-4 py-8 sm:px-8 lg:px-20">
       {/* <div></div> */}
@@ -34,7 +58,7 @@ function AdminProducts() {
 
       {/* Cards Section */}
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-20">
-        <DashboardCard title="Total Users" value="1,200" icon={<FaUsers />} color="text-gray-600" />
+        <DashboardCard title="Total Users" value={userCount.toLocaleString()} Url={"/admin/showContactUsers"} icon={<FaUsers />} color="text-gray-600" />
         <DashboardCard title="Members" value="530" icon={<FaUserFriends />} color="text-gray-600" />
         <DashboardCard title="Services" value="25" icon={<FaTools />} color="text-gray-600" />
         <DashboardCard title="Works" value="87" icon={<FaBriefcase />} color="text-gray-600" />

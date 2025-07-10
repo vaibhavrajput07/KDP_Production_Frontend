@@ -15,7 +15,8 @@ import Services from './pages/Services';
 import Support from './pages/Support';
 import Login from './pages/Login';
 
-import AdminDashboard from './pages/AdminDashboard'
+import AdminDashboard from './pages/AdminDashboard';
+import UserTable from './pages/UserTable';
 
 //Forms
 
@@ -61,13 +62,20 @@ function App() {
             isLoggedIn ? <Navigate to="/admin/dashboard" /> : <Login onLogin={() => setIsLoggedIn(true)} />
           }
         />
-
         {/* ✅ 2. Protect dashboard */}
         <Route
           path="/admin/dashboard"
           element={
             <PrivateRoute isLoggedIn={isLoggedIn}>
               <AdminDashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/showContactUsers"
+          element={
+            <PrivateRoute isLoggedIn={isLoggedIn}>
+              <UserTable />
             </PrivateRoute>
           }
         />
