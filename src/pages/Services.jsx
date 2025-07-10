@@ -21,8 +21,8 @@ function Services() {
         },
         {
             title: 'YouTube Content Creation',
-            description: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979294/youtube_v37ayh.jpg',
-            image: '/images/youtube.jpg',
+            description: 'Engaging videos for YouTube and short-form platforms with viral appeal.',
+            image: 'https://res.cloudinary.com/dogbphnnx/image/upload/v1751979294/youtube_v37ayh.jpg',
             price: '₹ 4,000 – ₹ 10,000 depending on video length & type',
         },
     ];
