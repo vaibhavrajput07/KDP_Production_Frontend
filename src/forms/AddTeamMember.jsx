@@ -175,7 +175,10 @@ function AddTeamMember() {
                     >
                         <option value="">-- Choose Role --</option>
                         <option value="Creator">Creator</option>
+                        <option value="Editor">Choreographer</option>
                         <option value="Editor">Editor</option>
+                        <option value="Editor">Camera Man</option>
+                        <option value="Editor">Dancer</option>
                         <option value="Designer">Designer</option>
                         <option value="Developer">Developer</option>
                     </select>

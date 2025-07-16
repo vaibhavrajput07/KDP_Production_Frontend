@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { FaWhatsapp, FaPhone } from 'react-icons/fa';
+
 import Spinner from '../components/Spinner';
 
 const owner = {
@@ -17,7 +19,7 @@ const owner = {
     ],
 };
 
-export default function About({isLoggedIn}) {
+export default function About({ isLoggedIn }) {
     console.log("About page logging :", isLoggedIn);
     const [team, setTeam] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -48,7 +50,7 @@ export default function About({isLoggedIn}) {
         } catch (err) {
             alert("Failed to delete. Try again.");
             console.error(err);
-        }finally{
+        } finally {
             setLoading(false);
         }
     };
@@ -151,6 +153,7 @@ export default function About({isLoggedIn}) {
             </section>
 
 
+
             {/* Team Members */}
             <div className="w-full text-center mb-10 lg:mt-20 lg:mb-30">
                 <h2 className="text-3xl lg:text-4xl lg:font-semibold text-gray-900 opacity-80">Team Members</h2>
@@ -166,6 +169,26 @@ export default function About({isLoggedIn}) {
                         />
                         <h4 className="text-lg font-semibold mt-4">{member.name}</h4>
                         <p className="text-sm text-gray-500">{member.title}</p>
+                        {
+                            member.name == "Vaibhav Rajput" ? (
+                                <div className="flex justify-center gap-4 mt-4">
+                                    <a
+                                        href="https://wa.me/9637400233?text=Hi%20Vaibhav%20I%20am%20interested%20in%20your%20Projects"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-green-600 text-white px-5 py-2 rounded-md text-sm hover:bg-green-700 transition"
+                                    >
+                                        <FaWhatsapp className="text-lg" />
+                                    </a>
+                                    <a
+                                        href="tel:+919637400233"
+                                        className="bg-blue-600 text-white px-5 py-2 rounded-md text-sm hover:bg-blue-700 transition"
+                                    >
+                                        <FaPhone className="text-lg" />
+                                    </a>
+                                </div>
+                            ) : null
+                        }
                         <div className="flex justify-center gap-4 mt-4">
                             {isLoggedIn ? (
                                 <>

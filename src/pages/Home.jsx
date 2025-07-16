@@ -162,7 +162,7 @@ export default function Home() {
                 href="https://www.instagram.com/just_amalner_things/?igsh=MTUyN2djaHhwdndwOA%3D%3D#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                className="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition"
               >
                 <FaInstagram className="text-lg" /> Instagram
               </a>
@@ -170,7 +170,7 @@ export default function Home() {
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition"
                 onClick={(e) => e.preventDefault()}
               >
                 <FaFacebook className="text-lg" /> Facebook
@@ -179,7 +179,59 @@ export default function Home() {
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                onClick={(e) => e.preventDefault()}
+              >
+                <FaYoutube className="text-lg" /> YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-gradient-to-b from-white to-gray-100 py-14 px-5 md:px-20 lg:py-30">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          {/* Image Section */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src="https://res.cloudinary.com/dogbphnnx/image/upload/v1752690324/kdpLogo_irpglb.jpg"
+              alt="Aamhi Amarlnerkar"
+              className="w-60 h-60 lg:w-72 lg:h-72  rounded-full object-cover shadow-xl transition-transform duration-500 hover:scale-105 border-4 border-pink-500"
+            />
+          </div>
+
+          {/* Content Section */}
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h2 className="text-2xl lg:text-4xl font-extrabold bg-gradient-to-r from-pink-600 to-purple-600 text-transparent bg-clip-text mb-3">
+              KDP Production
+            </h2>
+            <p className="text-gray-700 mb-4 leading-relaxed mb-8">
+              Hellow! Every One, This is my official account on Instagram, You can visite this channel
+              and Follow Our Channel On Instagram
+            </p>
+
+            <div className="flex justify-center md:justify-start gap-4 flex-wrap">
+              <a
+                href="https://www.instagram.com/kdp_production_09?igsh=MW9yb3c0eXlscmtpeg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition"
+              >
+                <FaInstagram className="text-lg" /> Instagram 
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                onClick={(e) => e.preventDefault()}
+              >
+                <FaFacebook className="text-lg" /> Facebook
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition"
                 onClick={(e) => e.preventDefault()}
               >
                 <FaYoutube className="text-lg" /> YouTube
